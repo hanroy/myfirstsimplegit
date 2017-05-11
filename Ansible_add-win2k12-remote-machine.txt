@@ -1,0 +1,26 @@
+##################################
+ansible windows 2012 deployement##
+##################################
+
+
+## On Ansible Management node execute the following cmd line ##
+$ pip install "pywinrm>=0.1.1"
+$ yum -y install python-devel krb5-devel krb5-libs krb5-workstation
+$ pip install kerberos requests_kerberos
+
+## On the remote machine windows 2012 Execute the below powershell command line ##
+
+$ Set-ExecutionPolicy Unrestricted
+
+$VerbosePreference = "Continue"
+iex ((new-object net.webclient).DownloadString("https://gist.githubusercontent.com/trondhindenes/b9b5b25b11273cc35659/raw/a56f8dd73a1c48872be493285104b2d732fb850a/configure-ansibletarget.ps1"))
+
+## On Ansible Mgmt Node add the remote machine IP on /etc/ansible/hosts
+
+## check the winrm connection via  « win_ping » 
+$ ansible AWSTest -i /etc/ansible/win2k12 -m win_ping --ask-vault-pass 
+
+	
+
+
+
