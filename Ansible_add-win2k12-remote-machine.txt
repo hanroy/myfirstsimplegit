@@ -12,9 +12,7 @@ $ pip install kerberos requests_kerberos
 
 $ Set-ExecutionPolicy Unrestricted
 
-$VerbosePreference = "Continue"
-iex ((new-object net.webclient).DownloadString("https://gist.githubusercontent.com/trondhindenes/b9b5b25b11273cc35659/raw/a56f8dd73a1c48872be493285104b2d732fb850a/configure-ansibletarget.ps1"))
-
+## Download the powershell script file https://github.com/stylersnico/ansible/blob/115aaeb17c4e13d6ef8420acd7143fddbf33ea5f/examples/scripts/ConfigureRemotingForAnsible.ps1 and execute it on the windows remote machine
 ## On Ansible Mgmt Node add the remote machine IP on /etc/ansible/hosts
 
 ## check the winrm connection via  « win_ping » 
