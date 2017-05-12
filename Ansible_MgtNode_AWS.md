@@ -3,9 +3,9 @@
 
 <h4>Infra</h4>
 
->VM AWS Centos7 
-Ansible2
-Foreman
+<li>VM AWS Centos7</li>
+<li>Ansible2</li>
+<li>Foreman</li>
 
 <h4>install ansible</h4>
 
